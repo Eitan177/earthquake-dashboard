@@ -12,7 +12,7 @@ def get_pyg_html(df: pd.DataFrame) -> str:
 
 @st.cache_data
 def get_df(ff) -> pd.DataFrame:
-    df = pd.read_csv(ff,header=0)
+    df = pd.read_csv(ff,sep='\t',header=0)
     
 
     return df
