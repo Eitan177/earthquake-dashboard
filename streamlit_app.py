@@ -11,8 +11,8 @@ def get_pyg_html(df: pd.DataFrame) -> str:
     return html
 
 @st.cache_data
-def get_df() -> pd.DataFrame:
-    df = d.read_csv(ff,header=0)
+def get_df(ff) -> pd.DataFrame:
+    df = pd.read_csv(ff,header=0)
     
 
     return df
