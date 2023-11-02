@@ -24,6 +24,8 @@ st.set_page_config(
 init_streamlit_comm()
 
 st.title("pygwalker")
+ff=st.file_uploader('dataframe to investigate')
+if ff != None:
     df = get_df(ff)
 
     components.html(get_pyg_html(df), width=1300, height=1000, scrolling=True)
