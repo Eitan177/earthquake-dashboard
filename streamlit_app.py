@@ -7,7 +7,7 @@ from pygwalker.api.streamlit import init_streamlit_comm, get_streamlit_html
 @st.cache_resource
 def get_pyg_html(df: pd.DataFrame) -> str:
     # When you need to publish your application, you need set `debug=False`,prevent other users to write your config file.
-    html = get_streamlit_html(df, use_kernel_calc=True, spec="./spec/geo_vis.json", debug=False)
+    html = get_streamlit_html(df, use_kernel_calc=True, debug=False)
     return html
 
 @st.cache_data
