@@ -12,20 +12,18 @@ def get_pyg_html(df: pd.DataFrame) -> str:
 
 @st.cache_data
 def get_df() -> pd.DataFrame:
-    df = pd.read_csv("./Significant Earthquake_Dataset_1900_2023.csv")
-    df["Time"] = pd.to_datetime(df["Time"]).dt.strftime('%Y-%m-%d %H:%M:%S')
+    df = d.read_csv(ff,header=0)
+    
 
     return df
 
 st.set_page_config(
-    page_title="Earthquake Visualization with pygwalker",
+    page_title="pygwalker",
     layout="wide"
 )
 init_streamlit_comm()
 
-st.title("Earthquake Visualization (1900-2023) with pygwalker")
-st.markdown("""Use [pygwalker](https://github.com/kanaries/pygwalker) for interactive visualization of geospatial data. More docs [here](https://docs.kanaries.net/pygwalker).)""")
+st.title("pygwalker")
+    df = get_df(ff)
 
-df = get_df()
-
-components.html(get_pyg_html(df), width=1300, height=1000, scrolling=True)
+    components.html(get_pyg_html(df), width=1300, height=1000, scrolling=True)
